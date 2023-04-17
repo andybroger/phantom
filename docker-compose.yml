@@ -5,8 +5,6 @@ services:
   phantom:
     image: ghcr.io/andybroger/phantom:latest
     restart: always
-    ports:
-      - "19132:19132/udp" # this is always needed
-      - "58682:58682/udp"
+    network_mode: host
     environment:
       PHANTOM_SERVER: "172.17.17.88:19132"

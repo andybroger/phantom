@@ -15,9 +15,8 @@ RUN go build -o phantom cmd/phantom.go
 FROM alpine:3.17
 
 # prepare ENV variables
-ENV PORT=58682
+ENV PORT=0
 ENV DEBUG=false
-ENV SERVER=
 
 # create a directory for the app
 WORKDIR /app
